@@ -1,0 +1,26 @@
+server:
+  port: 8500
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8801/eureka, http://localhost:8802/eureka
+spring:
+  application:
+    name: gateway
+  cloud:
+    gateway:
+      #http://localhost:8500/borrow/1
+      routes:
+        - id: borrow-service
+          uri: lb://borrowservice
+          predicates:
+          - Path=/borrow/**
+              # 继续添加新的路由配置，这里就以书籍管理服务为例
+              # 注意-要对齐routes:
+        - id: book-service
+          uri: lb://book-service
+          predicates:
+          - Path=/book/**
+          filters: # 添加过滤器
+          - AddRequestHeader=Test, HelloWorld!
+                # AddRequestHeader 就是添加请求头信息，其他工厂请查阅官网

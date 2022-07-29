@@ -9,19 +9,18 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>hystrix-dashboard</artifactId>
+    <artifactId>hystrix-dashboard2</artifactId>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
-
     <dependencies>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-hystrix-dashboard</artifactId>
-            <version>2.2.9.RELEASE</version>
+            <version>2.2.10.RELEASE</version>
         </dependency>
-
     </dependencies>
+
 </project>

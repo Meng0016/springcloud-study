@@ -12,3 +12,9 @@ spring:
     nacos:
       discovery:
         server-addr: localhost:8848
+#        namespace: d28318ab-86c4-49d5-8e10-252df43edef3
+    sentinel:
+      transport:
+        dashboard: localhost:8858
+  main:
+    allow-circular-references: true

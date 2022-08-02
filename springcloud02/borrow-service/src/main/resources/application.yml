@@ -13,3 +13,14 @@ spring:
       discovery:
         server-addr: localhost:8848
         ephemeral: true
+        cluster-name: Chengdu
+    loadbalancer:
+      nacos:
+        enable: true
+    sentinel:
+      transport:
+        dashboard: localhost:8858
+      web-context-unify: false
+      block-page: /blocked
+  main:
+    allow-circular-references: true

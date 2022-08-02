@@ -1,15 +1,20 @@
-server:
-  port: 8101
+#server:
+#  port: 8101
+#spring:
+#  application:
+#    name: user-service
+#  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://localhost:3306/cloudstudy?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+#    username: root
+#    password: root
+#  cloud:
+#    nacos:
+#      discovery:
+#        server-addr: localhost:8848
 spring:
-  application:
-    name: user-service
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/cloudstudy?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
-    username: root
-    password: root
-
-  cloud:
-    nacos:
-      discovery:
-        server-addr: localhost:8848
+  sentinel:
+    transport:
+      dashboard: localhost:8858
+  main:
+    allow-circular-references: true

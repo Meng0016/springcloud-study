@@ -19,4 +19,13 @@ public class UserServiceImpl implements UserSerivce {
         return userMapper.getUserById(uid);
     }
 
+    @Override
+    public int getRemain(int uid) {
+        return userMapper.getUserBookRemain(uid);
+    }
+
+    @Override
+    public boolean setRemain(int uid, int count) {
+        return userMapper.updateBookCount(uid, count) > 0;
+    }
 }

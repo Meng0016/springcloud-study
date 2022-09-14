@@ -1,6 +1,7 @@
 package com.meng.mapper;
 
 import com.meng.entity.Borrow;
+import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 
@@ -16,4 +17,7 @@ public interface BorrowMapper {
 
     @Select("select * from db_borrow where bid = #{bid} and uid = #{uid}")
     Borrow getBorrow(Integer uid,Integer bid);
+
+    @Insert("insert into db_borrow(uid,bid) VALUES (#{uid}, #{bid})")
+    int addBorrow(int uid, int bid);
 }

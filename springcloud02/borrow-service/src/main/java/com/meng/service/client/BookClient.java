@@ -9,4 +9,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public interface BookClient {
     @RequestMapping("/book/{bid}")
     Book getBookById(@PathVariable("bid") Integer bid);
+
+    @RequestMapping("/book/borrow/{bid}")
+    boolean bookBorrow(@PathVariable("bid") int bid);
+
+    @RequestMapping("/book/remain/{bid}")
+    int bookRemain(@PathVariable("bid") int bid);
 }

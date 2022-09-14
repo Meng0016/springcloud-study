@@ -18,3 +18,9 @@ spring:
       dashboard: localhost:8858
   main:
     allow-circular-references: true
+seata:
+  service:
+    vgroup-mapping:
+      user-service-seata-service-group: default
+    grouplist:
+      default: localhost:8868

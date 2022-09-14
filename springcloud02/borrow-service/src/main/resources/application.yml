@@ -24,3 +24,12 @@ spring:
       block-page: /blocked
   main:
     allow-circular-references: true
+feign:
+  sentinel:
+    enabled: true
+seata:
+  service:
+    vgroup-mapping:
+      borrow-service-seata-service-group: default
+    grouplist:
+      default: localhost:8868
